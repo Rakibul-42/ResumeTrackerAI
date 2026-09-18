@@ -1,0 +1,17 @@
+{
+  "name": "resume-tracker-ai",
+  "version": "1.0.0",
+  "private": true,
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "setup": "npm --prefix Server ci && npm --prefix Client ci",
+    "dev": "node scripts/dev.cjs",
+    "start": "npm --prefix Server start",
+    "db:migrate": "npm --prefix Server run db:migrate",
+    "env:check": "npm --prefix Server run env:check",
+    "test": "npm --prefix Server test && npm --prefix Client test",
+    "lint": "npm --prefix Client run lint && npm --prefix Server run check",
+    "build": "npm --prefix Client run build",
+    "check": "npm run lint && npm test && npm run build"
+  }
+}

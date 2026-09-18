@@ -1,0 +1,41 @@
+{
+  "brand": "ResumeTrackerAI",
+  "termsVersion": "2026-09-18",
+  "aiNoticeVersion": "2026-09-18",
+  "routes": {
+    "/": { "title": "ResumeTrackerAI — AI Resume Review & Version Tracking", "description": "Review your resume with AI-assisted feedback, compare saved versions, improve wording and export a clean PDF. Scores are estimates, not hiring guarantees.", "public": true },
+    "/privacy": { "title": "Privacy Policy | ResumeTrackerAI", "description": "How ResumeTrackerAI processes accounts, resume text, saved versions and AI results.", "public": true, "policy": true },
+    "/terms": { "title": "Terms of Use | ResumeTrackerAI", "description": "Read the conditions and limitations for using ResumeTrackerAI and reviewing AI-generated suggestions.", "public": true, "policy": true },
+    "/cookies": { "title": "Cookie & Storage Policy | ResumeTrackerAI", "description": "Understand necessary sign-in cookies and control optional browser preference storage.", "public": true, "policy": true },
+    "/login": { "title": "Sign In | ResumeTrackerAI", "description": "Sign in to your private resume workspace." },
+    "/register": { "title": "Create an Account | ResumeTrackerAI", "description": "Create a private workspace to review and organize your resume versions." },
+    "/dashboard": { "title": "Dashboard | ResumeTrackerAI", "description": "Your resume workspace overview." },
+    "/resumes": { "title": "Your Resumes | ResumeTrackerAI", "description": "Manage your saved resumes." },
+    "/insights": { "title": "Resume Insights | ResumeTrackerAI", "description": "Review your saved analysis trends." },
+    "/versions": { "title": "Version History | ResumeTrackerAI", "description": "Explore your saved resume versions." },
+    "/history": { "title": "Activity History | ResumeTrackerAI", "description": "Review your resume activity." },
+    "/settings": { "title": "Account Settings | ResumeTrackerAI", "description": "Manage your account and preferences." }
+  },
+  "policies": {
+    "privacy": { "title": "Privacy policy", "sections": [
+      { "title": "Data used to provide the service", "text": "An account stores a display name, email address, a password hash and session information. Uploaded resumes can contain personal and employment details. Do not upload another person's resume without permission or include information you do not want processed." },
+      { "title": "Resume processing and AI", "text": "The server extracts text from your PDF and sends resume content to Google Gemini for parsing and analysis. Original PDF bytes are processed temporarily and are not intentionally stored by this application. Extracted text, structured sections, saved versions, analysis results and activity records are stored in the configured PostgreSQL database. AI-provider handling depends on the provider terms and the owner's account configuration; those details must be verified before public launch." },
+      { "title": "Cookies, storage and external services", "text": "A necessary HttpOnly cookie maintains sign-in. Optional browser preferences can remember your theme and notification state only after you allow them. The application does not include advertising or visitor-analytics trackers. Hosting and database providers may process operational request information according to their own configuration and policies." },
+      { "title": "Deletion and retention", "text": "Deleting a resume removes its saved versions, analyses and related activity from the application database. Your account remains. Self-service account deletion is not currently available. Backup retention and provider-side deletion are separate operational matters; no retention or erasure deadline is promised by this draft." },
+      { "title": "Security and requests", "text": "The application uses hashed passwords, owner-scoped records and protected session cookies. No system can promise absolute security. The verified service owner and contact details must be supplied before the service accepts public users; jurisdiction-specific rights and request procedures must be finalized at that time." }
+    ] },
+    "terms": { "title": "Terms of use", "sections": [
+      { "title": "Purpose and limitations", "text": "ResumeTrackerAI provides AI-assisted resume review, saved versions, comparisons and PDF export. Scores are estimates of resume quality, not results from an employer's applicant tracking system. The service does not promise interviews, employment, acceptance by any ATS, uninterrupted availability or error-free AI output." },
+      { "title": "Your content and responsibilities", "text": "Upload only material you have permission to use. You retain ownership of your resume content. Use the service to improve truthful descriptions of your experience, not to invent qualifications, employment, dates or metrics. Review every suggestion and exported document before using it." },
+      { "title": "Account and acceptable use", "text": "Keep your sign-in details secure. Do not attempt to access another person's records, bypass usage limits, upload malicious content or disrupt the service. File size, supported formats and request limits are enforced by the application." },
+      { "title": "AI processing and availability", "text": "Core resume functions send content to Google Gemini. Provider access, quotas and availability can affect the service. Current functionality does not include email verification or forgotten-password recovery. No paid plan, refund entitlement or ongoing free allowance is represented by this draft." },
+      { "title": "Before public launch", "text": "The service operator's identity, contact details, applicable jurisdiction and any required consumer terms must be reviewed and completed before public release. This draft is not a claim of legal compliance and does not attempt to exclude rights that cannot lawfully be excluded." }
+    ] },
+    "cookies": { "title": "Cookie and storage policy", "sections": [
+      { "title": "Necessary sign-in cookie", "text": "The server sets an HttpOnly, SameSite=Lax session cookie when you register or sign in. Its name and lifetime follow the server's session configuration; production cookies use Secure transport. Logging out clears the cookie and invalidates sessions for your account. It is not used for advertising." },
+      { "title": "Your privacy choice", "text": "The arr-privacy-choice local-storage entry records whether you allow optional browser preferences and the choice format version. This small record is used to honor your decision, including a rejection, until you change it or clear browser storage." },
+      { "title": "Optional preferences", "text": "With permission, arr-theme remembers the selected color theme and arr-notif-last-seen remembers a notification timestamp. Without permission, these preferences work in memory. Revoking permission removes these two stored preference entries without clearing your sign-in cookie or unrelated browser data." },
+      { "title": "Tracking and your controls", "text": "No advertising, marketing or visitor-analytics trackers are included. Storage preferences can be changed below or through the footer/settings controls. Browser settings can also block or clear storage, but blocking necessary cookies prevents sign-in from working. Provider or hosting changes require this policy to be reviewed." }
+    ] }
+  }
+}

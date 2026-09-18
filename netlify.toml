@@ -1,0 +1,11 @@
+# Frontend build only. API routing is pending the background-job decision;
+# do not treat this as a completed public launch configuration yet.
+[build]
+  command = "npm --prefix Client ci --include=dev && npm --prefix Client run build"
+  publish = "Client/dist"
+
+[build.environment]
+  NODE_VERSION = "24"
+
+# Route-specific rewrites, metadata and cache headers are generated at build time.
+# No blanket SPA 200 fallback: unknown URLs must remain genuine 404 responses.

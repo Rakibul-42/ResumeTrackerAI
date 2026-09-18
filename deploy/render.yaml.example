@@ -1,0 +1,29 @@
+# Reference only: nothing is provisioned by this project.
+# Keep repository root as Root Directory so Server can import shared/.
+# Free is suitable for a trial only; review cold starts and resources before launch.
+services:
+  - type: web
+    name: resumetracker-api
+    runtime: node
+    plan: free
+    autoDeployTrigger: off
+    buildCommand: npm --prefix Server ci --omit=dev
+    startCommand: npm --prefix Server start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "24"
+      - key: NODE_ENV
+        value: production
+      - key: CLIENT_ORIGIN
+        sync: false
+      - key: POSTGRES_URL
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: PG_POOL_MAX
+        value: "5"
+      - key: AUTO_MIGRATE
+        value: "true"
