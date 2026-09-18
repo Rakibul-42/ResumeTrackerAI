@@ -1,0 +1,14 @@
+/privacy /privacy.html 200
+/terms /terms.html 200
+/cookies /cookies.html 200
+/login /login.html 200
+/register /register.html 200
+/dashboard /dashboard.html 200
+/resumes /resumes.html 200
+/insights /insights.html 200
+/versions /versions.html 200
+/history /history.html 200
+/settings /settings.html 200
+/resumes/:id/export /resume-export.html 200
+/resumes/:id /resume-detail.html 200
+/* /404.html 404
