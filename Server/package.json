@@ -1,0 +1,38 @@
+{
+  "name": "resume-tracker-ai-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Backend for Resume Tracker",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "db:migrate": "node src/db/migrate-cli.js",
+    "test": "node --test test/*.test.js",
+    "check": "node scripts/check.cjs",
+    "env:check": "node scripts/check-env.cjs"
+  },
+  "dependencies": {
+    "@google/genai": "^2.11.0",
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "diff": "^5.2.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.2.0",
+    "pdf-parse": "^2.4.5",
+    "pg": "^8.16.3",
+    "zod": "^3.25.76",
+    "zod-to-json-schema": "^3.25.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.3.14",
+    "supertest": "^7.2.2"
+  }
+}
