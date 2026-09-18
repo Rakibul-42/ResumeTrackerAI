@@ -1,0 +1,14 @@
+import { lazy } from 'react';
+export const Landing = lazy(() => import('@/pages/Landing'));
+export const Login = lazy(() => import('@/pages/Login'));
+export const Register = lazy(() => import('@/pages/Register'));
+export const Dashboard = lazy(() => import('@/pages/Dashboard'));
+export const Resumes = lazy(() => import('@/pages/Resumes'));
+export const ResumeDetail = lazy(() => import('@/pages/ResumeDetail'));
+export const Export = lazy(() => import('@/pages/Export'));
+export const Insights = lazy(() => import('@/pages/Insights'));
+export const Versions = lazy(() => import('@/pages/Versions'));
+export const History = lazy(() => import('@/pages/History'));
+export const Settings = lazy(() => import('@/pages/Settings'));
+export const Legal = lazy(() => import('@/pages/Legal'));
+export const NotFound = lazy(() => import('@/pages/NotFound'));
